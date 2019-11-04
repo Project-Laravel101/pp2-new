@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <link rel="stylesheet" href="prac.css">
+        <title>Prac Page</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container" id="first"> <!-- SignUp Page-->
+            <form>
+                <h1>1st Sign UpContaniner</h1>
+                <h2> There is Name</h2>
+                <h2> There is phone</h2>
+                <button type="button" id="move">Move</button>
+            </form>
+        </div>
+        <div class="form-container sign-up-container  sample" id="sec"> <!-- 2nd SignUp Page-->
+            <form>
+                <h1>2nd Sign UpContaniner</h1>
+                <button type="button" id="hove">hove</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container"><!-- SignIn Page-->
+            <form>
+                <h1>Sign In Contanier</h1>
+                <input type="email" placeholder="Email" />
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="prac.js"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script>
+  $(document).ready(function(){
+                $('#signUp').on('click', function(){
+                    $('#sec').hide();
+                });
+    
+                $('#move').on('click', function(){
+                    $('#sec').slideDown(10000);
+                });
+    
+    });
+    </script>
+</body>
+</html>
